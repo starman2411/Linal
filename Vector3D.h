@@ -90,9 +90,11 @@ ostream& operator<<(std::ostream& os,const Vector3D<T>& vec){
 
 template <typename T>
 istream& operator>>(std::istream &is, Vector3D<T>& vec){
-    is>>vec.set_x();
-    is>>vec.set_y();
-    is>>vec.set_z();
+    T x,y,z;
+    is>>x>>y>>z;
+    vec.set_x(x);
+    vec.set_y(y);
+    vec.set_z(z);
     return(is);
 };
 
