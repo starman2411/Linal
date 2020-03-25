@@ -77,8 +77,10 @@ ostream& operator<<(std::ostream& os,const Vector2D<T>& vec){
 
 template <typename T>
 istream& operator>>(std::istream &is, Vector2D<T>& vec){
-    is>>vec.set_x();
-    is>>vec.set_y();
+    T x,y;
+    is>>x>>y;
+    vec.set_x(x);
+    vec.set_y(y);
     return(is);
 };
 
